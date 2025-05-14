@@ -10,14 +10,15 @@ import sessionRouter from "./routes/session.route.js"
 const app = express();
 app.use(cookieParser());
 
-const allowedOrigin = process.env.CLIENT_URI;
-app.use(
-  cors({
-    origin: "https://recruitment-bot-vercel-6f2z.vercel.app/",
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-  })
-);
+const allowedOrigins = [
+  "https://recruitment-bot-vercel-6f2z.vercel.app",
+  "http://localhost:5173",
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
 app.use(express.json());
 
 
