@@ -13,7 +13,7 @@ const ProtectedRoute = () => {
     const checkAuth = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:9876/api/auth/check-authentication",
+          "https://recruitment-bot-vercel.vercel.app/api/auth/check-authentication",
           {},
           { withCredentials: true }
         );

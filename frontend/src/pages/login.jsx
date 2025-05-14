@@ -23,7 +23,7 @@ const Login = () => {
 
       if(code){
 
-        const response = await axios.get(`http://localhost:9876/api/auth/google?code=${code}`,{withCredentials:true});
+        const response = await axios.get(`https://recruitment-bot-vercel.vercel.app/api/auth/google?code=${code}`,{withCredentials:true});
 
         // console.log("response: ",response);
 

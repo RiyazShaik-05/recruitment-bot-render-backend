@@ -26,7 +26,7 @@ const SessionList = () => {
       }
 
       const { data } = await axios.get(
-        `http://localhost:9876/api/session/get-all-sessions/${user.email}`
+        `https://recruitment-bot-vercel.vercel.app/api/session/get-all-sessions/${user.email}`
       );
 
       if (!data.success) throw new Error("Failed to fetch sessions");
@@ -51,7 +51,7 @@ const SessionList = () => {
       setLoading((prev) => !prev);
 
       const response = await axios.delete(
-        `http://localhost:9876/api/session/delete-session?sessionId=${sessionId}`
+        `https://recruitment-bot-vercel.vercel.app/api/session/delete-session?sessionId=${sessionId}`
       );
 
       if (!response.data.success) {
