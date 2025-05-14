@@ -25,7 +25,7 @@ const Login = () => {
 
         const response = await axios.get(`https://recruitment-bot-vercel.vercel.app/api/auth/google?code=${code}`,{withCredentials:true});
 
-        // console.log("response: ",response);
+        console.log("response from login backend: ",response);
 
         dispatch(login(response.data.user));
 
