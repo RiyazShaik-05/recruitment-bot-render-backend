@@ -26,7 +26,7 @@ const SessionList = () => {
       }
 
       const { data } = await axios.get(
-        `/api/session/get-all-sessions/${user.email}`
+        `https://recruitment-bot-vercel-backend-i1lljia9z-riyaz-shaiks-projects.vercel.app/api/session/get-all-sessions/${user.email}`
       );
 
       if (!data.success) throw new Error("Failed to fetch sessions");

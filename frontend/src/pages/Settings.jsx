@@ -20,7 +20,7 @@ const SettingsPage = () => {
 
 
     try {
-      const response = await axios.delete(`/api/auth/delete-account/${user.email}`,{withCredentials:true});
+      const response = await axios.delete(`https://recruitment-bot-vercel-backend-i1lljia9z-riyaz-shaiks-projects.vercel.app/api/auth/delete-account/${user.email}`,{withCredentials:true});
 
       // console.log(response);
 
