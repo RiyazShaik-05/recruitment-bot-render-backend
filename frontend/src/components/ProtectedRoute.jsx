@@ -18,7 +18,7 @@ const ProtectedRoute = () => {
           { withCredentials: true }
         );
 
-        console.log("In Protected Route: ",response)
+        // console.log("In Protected Route: ",response)
 
         if (response.data.success) {
           setIsAllowed(true);

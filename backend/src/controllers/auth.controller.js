@@ -9,7 +9,7 @@ import User from "../models/user.model.js"
 
 const googleAuth = async (req, res) => {
 
-  console.log("In google auth controller");
+  // console.log("In google auth controller");
   try {
     const { code } = req.query;
 
@@ -177,7 +177,7 @@ const deleteAccount = async(req,res) => {
 const checkUserAuthenticated = async(req,res) => {
   try {
 
-    console.log("Valid User: ",req.validUser);
+    // console.log("Valid User: ",req.validUser);
       if(!req.validUser){
         return res.status(400).json({
           success:false,
