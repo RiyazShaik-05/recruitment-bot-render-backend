@@ -144,6 +144,8 @@ Score should be between 1 and 10.
       history
     );
 
+    console.log("Result Generated!");
+
     if(!result){
       return res.status(500).json({
         success:false,
@@ -164,6 +166,8 @@ Score should be between 1 and 10.
       });
     }
 
+    console.log("Result Parsed!");
+
     // Save result
     const newResult = await Result.create({
       sessionId,
@@ -173,6 +177,8 @@ Score should be between 1 and 10.
       improvementSuggestions: cleanedResult.improvementSuggestions,
       email
     });
+
+    console.log("Result Saved!");
     
     await newResult.save();
 
