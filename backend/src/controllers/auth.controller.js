@@ -8,6 +8,8 @@ import User from "../models/user.model.js"
 
 
 const googleAuth = async (req, res) => {
+
+  console.log("In google auth controller");
   try {
     const { code } = req.query;
 
