@@ -144,6 +144,13 @@ Score should be between 1 and 10.
       history
     );
 
+    if(!result){
+      return res.status(500).json({
+        success:false,
+        message:"Couldn't generate result!"
+      })
+    }
+
     let cleanedResult;
     try {
       cleanedResult = JSON.parse(

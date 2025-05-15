@@ -47,6 +47,11 @@ const Session = () => {
         email,
       }
     );
+
+    if(!response.data.success){
+      alert(response.data.message || "Internal Server Error!");
+      return;
+    }
     setResult(resultResponse.data.result);
     setResultFetched(true);
   };
