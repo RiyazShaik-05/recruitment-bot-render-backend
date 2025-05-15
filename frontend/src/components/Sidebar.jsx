@@ -29,7 +29,7 @@ const Sidebar = () => {
   const handleLogout = async () => {
     try {
       const response = await axios.post(
-        "https://recruitment-bot-vercel.vercel.app/api/auth/logout",
+        "/api/auth/logout",
         {},
         { withCredentials: true }
       );

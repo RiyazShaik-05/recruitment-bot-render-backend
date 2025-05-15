@@ -18,10 +18,9 @@ const SettingsPage = () => {
 
     if (!confirmed) return;
 
-    // http://localhost:9876/api/auth/delete-account/sr308379@gmail.com
 
     try {
-      const response = await axios.delete(`https://recruitment-bot-vercel.vercel.app/api/auth/delete-account/${user.email}`,{withCredentials:true});
+      const response = await axios.delete(`/api/auth/delete-account/${user.email}`,{withCredentials:true});
 
       // console.log(response);
 

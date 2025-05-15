@@ -19,7 +19,7 @@ const DisplaySessionDetails = () => {
 
         setLoading(prev => !prev);
         
-        const response = await axios.get(`https://recruitment-bot-vercel.vercel.app/api/session/get-session-details?sessionId=${sessionID}`);
+        const response = await axios.get(`/api/session/get-session-details?sessionId=${sessionID}`);
         
 
         if(!response.data.success){
