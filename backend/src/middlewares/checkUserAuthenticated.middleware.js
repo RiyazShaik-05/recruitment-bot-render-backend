@@ -6,7 +6,7 @@ const checkUserAuthenticated = async(req,res,next) => {
         const token =
       req.cookies?.token || req.header("Authorization")?.replace("Bearer ", "");
 
-      // console.log("Token: ",token);
+      console.log("Token: ",token);
       // console.log("REq Body: ",req.body);
 
       if(!token){

@@ -177,7 +177,7 @@ const deleteAccount = async(req,res) => {
 const checkUserAuthenticated = async(req,res) => {
   try {
 
-    // console.log("Valid User: ",req.validUser);
+    console.log("Valid User: ",req.validUser);
       if(!req.validUser){
         return res.status(400).json({
           success:false,
