@@ -11,7 +11,7 @@ const app = express();
 app.use(cookieParser());
 
 const allowedOrigins = [
-  "https://recruitment-bot-qzss.onrender.com",
+  "https://recruitment-bot-rho.vercel.app",
   "http://localhost:5173",
 ];
 
