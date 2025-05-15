@@ -48,7 +48,7 @@ const Session = () => {
       }
     );
 
-    if(!response.data.success){
+    if(!resultResponse.data.success){
       alert(response.data.message || "Internal Server Error!");
       return;
     }
