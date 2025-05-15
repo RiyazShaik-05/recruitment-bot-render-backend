@@ -37,7 +37,7 @@ const Session = () => {
   const getResult = async () => {
     // console.log(sessionId);
     const resultResponse = await axios.post(
-      "/https://recruitment-bot-vercel-backend-i1lljia9z-riyaz-shaiks-projects.vercel.app/api/chat/evaluate-result",
+      "https://recruitment-bot-vercel.onrender.com/api/chat/evaluate-result",
       {
         sessionId,
         history: [
@@ -92,7 +92,7 @@ const Session = () => {
         setIsProcessing((prev) => !prev);
 
         const response = await axios.post(
-          "https://recruitment-bot-vercel-backend-i1lljia9z-riyaz-shaiks-projects.vercel.app/api/chat/submit-jd",
+          "https://recruitment-bot-vercel.onrender.com/api/chat/submit-jd",
           {
             jd: jobDesc,
             email,
@@ -148,7 +148,7 @@ const Session = () => {
 
       // Send the message to the backend and get the bot's response
       const response = await axios.post(
-        "https://recruitment-bot-vercel-backend-i1lljia9z-riyaz-shaiks-projects.vercel.app/api/chat/handle-chat",
+        "https://recruitment-bot-vercel.onrender.com/api/chat/handle-chat",
         {
           message: text,
           history: [

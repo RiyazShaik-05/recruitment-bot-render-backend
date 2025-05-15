@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://recruitment-bot-vercel-backend-i1lljia9z-riyaz-shaiks-projects.vercel.app',
+        target: 'https://recruitment-bot-vercel.onrender.com/',
         changeOrigin: true,
         secure: true,
       },
