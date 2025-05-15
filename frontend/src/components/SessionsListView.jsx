@@ -51,7 +51,7 @@ const SessionList = () => {
       setLoading((prev) => !prev);
 
       const response = await axios.delete(
-        `/api/session/delete-session?sessionId=${sessionId}`
+        `https://recruitment-bot-vercel.onrender.com/api/session/delete-session?sessionId=${sessionId}`
       );
 
       if (!response.data.success) {
