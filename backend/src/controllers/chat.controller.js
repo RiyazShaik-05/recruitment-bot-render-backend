@@ -93,9 +93,9 @@ const evaluateResult = async (req, res) => {
   try {
     const { sessionId, history, email } = req.body;
 
-    console.log("In Evaluate Result: ")
+    // console.log("In Evaluate Result: ")
 
-    console.log("Req Bodyy: ",req.body);
+    // console.log("Req Bodyy: ",req.body);
 
     if (!sessionId || !history || history.length === 0 ||!email) {
       return res.status(400).json({
@@ -106,7 +106,7 @@ const evaluateResult = async (req, res) => {
 
     const existingResult = await Result.findOne({ sessionId });
 
-    console.log("Existing Result: ",existingResult)
+    // console.log("Existing Result: ",existingResult)
 
     if (existingResult) {
       return res.status(200).json({
@@ -116,7 +116,7 @@ const evaluateResult = async (req, res) => {
       });
     }
 
-    console.log("Generating Result");
+    // console.log("Generating Result");
 
     // Prompt the AI for evaluation
     const result = await getResponse(
@@ -144,7 +144,7 @@ Score should be between 1 and 10.
       history
     );
 
-    console.log("Result Generated!");
+    // console.log("Result Generated!");
 
     if(!result){
       return res.status(500).json({
@@ -159,14 +159,14 @@ Score should be between 1 and 10.
         result.replace(/^```json\n?/, '').replace(/\n?```$/, '')
       );
     } catch (parseError) {
-      console.error("Failed to parse result JSON:", parseError.message);
+      // console.error("Failed to parse result JSON:", parseError.message);
       return res.status(500).json({
         success: false,
         message: "AI response could not be parsed. Please try again.",
       });
     }
 
-    console.log("Result Parsed!");
+    // console.log("Result Parsed!");
 
     // Save result
     const newResult = await Result.create({
@@ -178,7 +178,7 @@ Score should be between 1 and 10.
       email
     });
 
-    console.log("Result Saved!");
+    // console.log("Result Saved!");
     
     await newResult.save();
 

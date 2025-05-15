@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { Navigate, Outlet } from "react-router-dom";
 import axios from "axios";
 import {logout} from "../redux/slices/user.slice.js"
+import Loader from "./Loader.jsx";
 
 const ProtectedRoute = () => {
   const [isAllowed, setIsAllowed] = useState(null);
@@ -34,7 +35,7 @@ const ProtectedRoute = () => {
     checkAuth();
   }, [dispatch]);
 
-  if (isAllowed === null) return <div>Loading...</div>;
+  if (isAllowed === null) return <Loader/>;
 
   return isAllowed ? <Outlet /> : <Navigate to="/login" />;
 };
