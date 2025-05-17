@@ -111,7 +111,7 @@ const Sidebar = () => {
       </aside>
 
       {/* Mobile Header */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 w-full bg-gray-900/80 backdrop-blur-sm border-b border-gray-700 z-40">
+      <div className="lg:hidden fixed top-0 left-0 right-0 w-full bg-gray-900/80 backdrop-blur-sm border-b border-gray-700 z-1">
         <div className="flex justify-between items-center p-4">
           <div className="flex items-center gap-2">
             <span className="text-2xl text-amber-400">🤖</span>
