@@ -42,3 +42,8 @@
     @apply bg-gray-600 rounded-full;
   }
 }
+
+
+button, textarea {
+  touch-action: manipulation;
+}
