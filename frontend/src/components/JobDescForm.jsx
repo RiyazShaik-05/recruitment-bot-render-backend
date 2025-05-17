@@ -2,7 +2,7 @@ import React from "react";
 
 const JobDescriptionForm = ({ jobDesc, setJobDesc = ()=>{}, handleSubmit=()=>{}, isProcessing = false, isSubmitted = false, handleReset =()=>{}, showReset=true }) => {
   return (
-    <div className="space-y-6 ww-full mx-auto">
+    <div className="space-y-6 w-full mx-auto">
       <div className="flex items-center gap-3">
         <svg
           className="w-8 h-8 text-mercury-400"
